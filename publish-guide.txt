@@ -1,0 +1,158 @@
+Ayu_p リンクページ GitHub Pages 公開手順
+========================================
+
+このフォルダーは、GitHub Pagesでそのまま公開できる形になっています。
+
+公開に使う主なファイル:
+- index.html
+- style.css
+
+補足:
+- README.md はGitHub上で説明として表示されるファイルです。
+- wordpress-body.html はWordPress貼り付け用の予備ファイルです。GitHub Pages公開には使いません。
+
+
+1. GitHubで新しいリポジトリを作る
+--------------------------------
+
+1. GitHubにログインします。
+2. 右上の「+」から「New repository」を選びます。
+3. Repository name に好きな名前を入れます。
+
+おすすめ例:
+ayup-link-page
+
+4. Public を選びます。
+5. 「Create repository」を押します。
+
+
+2. ファイルをGitHubにアップする
+------------------------------
+
+アップするフォルダー:
+H:\ayup-link-page
+
+アップするファイル:
+- index.html
+- style.css
+- README.md
+- publish-guide.txt
+- wordpress-body.html
+
+GitHubの画面でアップする場合:
+
+1. 作成したリポジトリを開きます。
+2. 「Add file」を押します。
+3. 「Upload files」を選びます。
+4. H:\ayup-link-page の中のファイルをドラッグ&ドロップします。
+5. 画面下の「Commit changes」を押します。
+
+
+3. GitHub Pagesを有効にする
+---------------------------
+
+1. リポジトリの画面で「Settings」を開きます。
+2. 左メニューから「Pages」を開きます。
+3. 「Build and deployment」の「Source」で「Deploy from a branch」を選びます。
+4. 「Branch」で main を選びます。
+5. フォルダーは /root を選びます。
+6. 「Save」を押します。
+
+
+4. 公開URLを確認する
+-------------------
+
+設定後、少し待つとGitHub PagesのURLが表示されます。
+
+URLの形はだいたい次のようになります。
+
+https://ユーザー名.github.io/リポジトリ名/
+
+例:
+https://your-name.github.io/ayup-link-page/
+
+反映には数十秒から数分かかることがあります。
+
+
+5. URLを差し替える方法
+---------------------
+
+リンク先を変更したい場合は、index.html を編集します。
+
+index.html の中には、次のようなリンクがあります。
+
+<a class="link-button primary" href="#" target="_blank" rel="noopener noreferrer">
+
+この href="#" の # の部分にURLを貼ります。
+
+例:
+
+変更前:
+href="#"
+
+変更後:
+href="https://www.youtube.com/@your-channel"
+
+
+どこに何のURLを入れるか
+----------------------
+
+YouTubeチャンネル:
+「YouTubeチャンネル用URL」と書かれたコメントの下にある href="#" を変更します。
+
+Threads:
+「Threads用URL」と書かれたコメントの下にある href="#" を変更します。
+
+最新曲:
+「最新曲用URL」と書かれたコメントの下にある href="#" を変更します。
+
+Spotify:
+「Spotify用URL」と書かれたコメントの下にある href="#" を変更します。
+
+Apple Music:
+「Apple Music用URL」と書かれたコメントの下にある href="#" を変更します。
+
+Amazon Music:
+「Amazon Music用URL」と書かれたコメントの下にある href="#" を変更します。
+
+
+6. URL変更後に再アップする
+-------------------------
+
+GitHub上で直接編集した場合:
+
+1. index.html を開きます。
+2. 右上の鉛筆アイコンを押します。
+3. href="#" を必要なURLに変更します。
+4. 「Commit changes」を押します。
+
+パソコン上で編集した場合:
+
+1. H:\ayup-link-page\index.html を編集して保存します。
+2. GitHubの「Upload files」から index.html を再アップします。
+3. 「Commit changes」を押します。
+
+
+7. 公開前チェック
+----------------
+
+公開前に次を確認してください。
+
+- index.html がリポジトリの一番上の階層にある
+- style.css も index.html と同じ場所にある
+- index.html の中に <link rel="stylesheet" href="style.css"> がある
+- URL未定のリンクは href="#" のままでOK
+- GitHub Pagesの設定が main / root になっている
+
+
+困ったとき
+----------
+
+ページが表示されない場合:
+- GitHub Pagesの反映まで数分待ってください。
+- Settings > Pages に表示される公開URLをもう一度確認してください。
+- index.html がフォルダーの中ではなく、リポジトリ直下にあるか確認してください。
+
+デザインが反映されない場合:
+- style.css が index.html と同じ場所にあるか確認してください。
+- index.html の <link rel="stylesheet" href="style.css"> を消していないか確認してください。
